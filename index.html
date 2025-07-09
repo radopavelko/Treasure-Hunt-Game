@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🏴‍☠️ Treasure Hunt Game</h1>
+        </header>
+        
+        <div id="game-setup" class="screen">
+            <h2>Choose Your Characters</h2>
+            <div class="players-setup">
+                <div class="player-setup">
+                    <h3>Player 1</h3>
+                    <div class="player-name-input">
+                        <input type="text" id="player1-name" placeholder="Enter Player 1 Name" maxlength="15">
+                    </div>
+                    <div class="character-selection">
+                        <div class="character" data-character="explorer" data-player="1">
+                            <div class="character-icon">🧭</div>
+                            <span>Explorer</span>
+                        </div>
+                        <div class="character" data-character="pirate" data-player="1">
+                            <div class="character-icon">🏴‍☠️</div>
+                            <span>Pirate</span>
+                        </div>
+                        <div class="character" data-character="archaeologist" data-player="1">
+                            <div class="character-icon">🏛️</div>
+                            <span>Archaeologist</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="player-setup">
+                    <h3>Player 2</h3>
+                    <div class="player-name-input">
+                        <input type="text" id="player2-name" placeholder="Enter Player 2 Name" maxlength="15">
+                    </div>
+                    <div class="character-selection">
+                        <div class="character" data-character="explorer" data-player="2">
+                            <div class="character-icon">🧭</div>
+                            <span>Explorer</span>
+                        </div>
+                        <div class="character" data-character="pirate" data-player="2">
+                            <div class="character-icon">🏴‍☠️</div>
+                            <span>Pirate</span>
+                        </div>
+                        <div class="character" data-character="archaeologist" data-player="2">
+                            <div class="character-icon">🏛️</div>
+                            <span>Archaeologist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="start-game" class="btn-primary" disabled>Start Game</button>
+        </div>
+        
+        <div id="game-board" class="screen hidden">
+            <div class="game-header">
+                <div class="player-info">
+                    <div class="player" id="player1-info">
+                        <span class="player-name">Player 1</span>
+                        <div class="player-character" id="player1-character"></div>
+                        <div class="player-stats">
+                            <span>Points: <span id="player1-points">0</span></span>
+                            <span>Key: <span id="player1-key">❌</span></span>
+                        </div>
+                    </div>
+                    <div class="turn-indicator">
+                        <span id="current-turn">Player 1's Turn</span>
+                    </div>
+                    <div class="player" id="player2-info">
+                        <span class="player-name">Player 2</span>
+                        <div class="player-character" id="player2-character"></div>
+                        <div class="player-stats">
+                            <span>Points: <span id="player2-points">0</span></span>
+                            <span>Key: <span id="player2-key">❌</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-grid" id="game-grid">
+                <!-- Game board will be generated here -->
+            </div>
+            
+            <div class="game-controls">
+                <button id="roll-dice" class="btn-primary">Roll Dice</button>
+                <div class="dice-container">
+                    <div class="dice-visual" id="dice-visual">🎲</div>
+                    <div class="dice-result" id="dice-result"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="game-over" class="screen hidden">
+            <h2>🏆 Game Over!</h2>
+            <div id="winner-announcement"></div>
+            <div id="final-scores"></div>
+            <button id="play-again" class="btn-primary">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

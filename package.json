@@ -1,0 +1,29 @@
+{
+  "name": "treasure-hunt-game",
+  "version": "1.0.0",
+  "description": "A fun, interactive web-based treasure hunt game for two players",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "dev": "python3 -m http.server 3000",
+    "open": "open index.html"
+  },
+  "keywords": [
+    "game",
+    "treasure-hunt",
+    "html",
+    "css",
+    "javascript",
+    "web-game",
+    "2-player"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {},
+  "dependencies": {}
+}
